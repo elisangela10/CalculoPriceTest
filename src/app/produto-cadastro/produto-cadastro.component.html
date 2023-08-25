@@ -1,0 +1,45 @@
+<div class="container">
+  <h2>Cadastro de Produtos</h2>
+  <form [formGroup]="produtocadastroForm" (ngSubmit)="adicionarProduto()">
+    <mat-form-field appearance="fill">
+      <mat-label>Fabricante:</mat-label>
+      <input matInput formControlName="fabricante" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Cód. Produto:</mat-label>
+      <input matInput formControlName="codigo" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Descrição:</mat-label>
+      <input matInput formControlName="descricao" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Valor:</mat-label>
+      <input matInput formControlName="valor" type="number" step="0.01" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Incluir</button>
+  </form>
+
+  <table class="product-table">
+    <tr>
+      <th>Fabricante</th>
+      <th>Cód. Produto</th>
+      <th>Descrição</th>
+      <th>Valor</th>
+      <th>Editar</th>
+      <th>Excluir</th>
+    </tr>
+    <tr *ngFor="let produto of produtos; let i = index">
+      <td>{{ produto.fabricante }}</td>
+      <td>{{ produto.codigo }}</td>
+      <td>{{ produto.descricao }}</td>
+      <td>{{ produto.valor | currency: 'BRL' }}</td>
+      <td><button mat-icon-button color="primary" (click)="editarProduto(produto)"><mat-icon>edit</mat-icon></button></td>
+      <td><button mat-icon-button color="warn" (click)="excluirProduto(produto)"><mat-icon>delete</mat-icon></button></td>
+    </tr>
+  </table>
+</div>

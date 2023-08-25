@@ -37,3 +37,43 @@
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir um pull request.
 
+
+
+# CalculationPriceTest
+
+## Functionalities
+
+- Registration of products with information such as manufacturer, code, description and value.
+- Total price calculation considering discount.
+- Filtering of products by manufacturer.
+- Deleting and editing products.
+- Dynamic update of the list of manufacturers in the filter.
+
+## Prerequisites
+
+- Node.js and npm installed.
+- Angular CLI installed (`npm install -g @angular/cli`).
+
+## Installation
+
+1. Clone this repository: `git clone https://github.com/elisangela10/CalculoPriceTest.git`
+2. Navigate to the project directory: `cd calculo-precos`
+3. Install the dependencies: `npm install`
+
+## Usage
+
+1. Start the development server: `ng serve`
+2. Open your browser and go to: `http://localhost:4200`
+
+## Project Structure
+
+- `src/app` contains Angular components, models, services and other files.
+
+## Services
+
+- `ProductService`: Manages products, adding, editing, deleting and searching.
+- `ManufacturerService`: Manages the list of available manufacturers.
+
+## Contribution
+
+Contributions are welcome! Feel free to open a pull request.

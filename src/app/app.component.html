@@ -1,0 +1,22 @@
+<mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span *ngIf="!editTabTitle[0]">{{ tabTitles[0] }}</span>
+      <input *ngIf="editTabTitle[0]" [(ngModel)]="tabTitles[0]" (blur)="editTabTitle[0] = false">
+      <button mat-icon-button (click)="editTabTitle[0] = !editTabTitle[0]">
+        <mat-icon>{{ editTabTitle[0] ? 'done' : 'edit' }}</mat-icon>
+      </button>
+    </ng-template>
+    <app-produto-cadastro></app-produto-cadastro>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span *ngIf="!editTabTitle[1]">{{ tabTitles[1] }}</span>
+      <input *ngIf="editTabTitle[1]" [(ngModel)]="tabTitles[1]" (blur)="editTabTitle[1] = false">
+      <button mat-icon-button (click)="editTabTitle[1] = !editTabTitle[1]">
+        <mat-icon>{{ editTabTitle[1] ? 'done' : 'edit' }}</mat-icon>
+      </button>
+    </ng-template>
+    <app-calculo-precos></app-calculo-precos>
+  </mat-tab>
+</mat-tab-group>
