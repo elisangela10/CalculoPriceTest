@@ -15,7 +15,7 @@
 
 ## Instalação
 
-1. Clone este repositório: `git clone https://github.com/seu-usuario/seu-repositorio.git`
+1. Clone este repositório: `git clone https://github.com/elisangela10/CalculoPriceTest.git`
 2. Navegue até o diretório do projeto: `cd calculo-precos`
 3. Instale as dependências: `npm install`
 
